@@ -1,1 +1,5 @@
 # Student-Report-Management
+This project “Student Report Management System” provides us a simple interface for maintainance of student's result information.
+It can be used by educational institutes or colleges to maintain the records of students easily. 
+Achieving this objective is difficult using a manual system as the information is scattered, and collecting relevant information may be very time consuming. 
+All these problems are solved using this project.
