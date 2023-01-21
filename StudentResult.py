@@ -33,7 +33,7 @@ while True:
            dic['IP']=ip1
            dic['PERCENTAGE']=per1
            df=pd.DataFrame([dic])          
-           df.to_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv",mode='a',na_rep=' ',header=False,index=False)
+           df.to_csv(r"Book1.csv",mode='a',na_rep=' ',header=False,index=False)
            #df.to_csv('d:\person.csv',mode='a',na_rep=' ',header=True)        
            print('************************************************************************************************************')
            print('Record Added Successfully')         
@@ -42,7 +42,7 @@ while True:
            print('\n'*3 )
            break
     elif choice==2:      
-        df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv",index_col='ID',usecols=[0,1,2,3,4,5,6,7])
+        df=pd.read_csv(r"Book1.csv",index_col='ID',usecols=[0,1,2,3,4,5,6,7])
         print(df)        
         print('************************************************************************************************************')
         x=input('Press any key to continue........')   
@@ -63,7 +63,7 @@ while True:
             choice=int(input('Enter choice:'))
             if choice==1:
                 nm=input('Enter Student Name to search:')
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['NAME']==nm]
                 if b.empty:                                   
                     print('*******************************************************************************************************************')               
@@ -79,7 +79,7 @@ while True:
                 print('\n'*3 )
             elif choice==2:
                 id=int(input('Enter Student ID to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['ID']==id]
                 if b.empty:                                        
                     print('*******************************************************************************************************************')               
@@ -95,7 +95,7 @@ while True:
                 print('\n'*3 )
             elif choice==3:
                 phy=int(input('Enter Physics marks to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['PHYSICS']==phy]
                 if b.empty:                                        
                     print('*******************************************************************************************************************')               
@@ -111,7 +111,7 @@ while True:
                 print('\n'*3 )
             elif choice==4:
                 CHEM=int(input('Enter Chemistry marks to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['CHEMISTRY']==CHEM]
                 if b.empty:                                       
                     print('*******************************************************************************************************************')               
@@ -127,7 +127,7 @@ while True:
                 print('\n'*3 )
             elif choice==5:
                 maths=int(input('Enter Maths marks to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")  
+                df=pd.read_csv(r"Book1.csv")  
                 b=df[df['MATHS']==maths]
                 if b.empty:                                        
                     print('*******************************************************************************************************************')               
@@ -143,7 +143,7 @@ while True:
                 print('\n'*3 )
             elif choice==6:
                 Eng=int(input('Enter English marks to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['ENGLISH']==Eng]
                 if b.empty:                                      
                     print('*******************************************************************************************************************')               
@@ -159,7 +159,7 @@ while True:
                 print('\n'*3 )           
             elif choice==7:
                 ip=int(input('Enter IP marks to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['IP']==ip]
                 if b.empty:                    
                     print('*******************************************************************************************************************')               
@@ -173,7 +173,7 @@ while True:
                     print('******************************************************************************************************')       
             elif choice==8:
                 per=float(input('Enter PERCENTAGE to search:'))
-                df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")          
+                df=pd.read_csv(r"Book1.csv")          
                 b=df[df['PERCENTAGE']==per]
                 if b.empty:                                        
                     print('*******************************************************************************************************************')               
@@ -188,7 +188,7 @@ while True:
             elif choice==9:
                 break
     elif choice==4:
-        df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")
+        df=pd.read_csv(r"Book1.csv")
         print('***************************************CURRENT STATUS OF RESULTS OF THE STUDENTS******************')
         print(df)        
         print('****************************************************************************')
@@ -196,7 +196,7 @@ while True:
         x=int(input('Are you sure to delete the record. Press 1 for YES and 0 for NO:'))
         if x==1:
             df.drop(idx,inplace=True)            
-            df.to_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv",mode='w',na_rep='  ')            
+            df.to_csv(r"Book1.csv",mode='w',na_rep='  ')            
             print('**********************************************************************************************************************************')
             print('Record deleted successfully')           
             print('***********************************************************************************************************')
@@ -218,7 +218,7 @@ while True:
             print('6. PLOT THE GRAPH OVERALL PERCENTAGE WISE!')
             print('7. Return to the main menu!')
             choice=int(input('Enter choice:'))
-            df=pd.read_csv(r"C:\Users\Alok Verma\Desktop\AK\Code\Book1.csv")
+            df=pd.read_csv(r"Book1.csv")
             if choice==1:
                 a=df['PHYSICS'].tolist()
                 x=df['NAME'].tolist()
