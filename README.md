@@ -7,3 +7,5 @@ All these problems are solved using this project.
 **NOTE***
 The format of the csv file to be used has been provided.
 If any changes are made to the column names then code needs to be modified accordingly.
+Save the CSV file at the same location as that of the Python file.
+Thanks!
